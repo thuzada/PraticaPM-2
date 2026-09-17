@@ -1,23 +1,42 @@
 public class Produto {
     private String nome;
-    private String codigo;
+    private int codigo;
     private double preco;
 
-    public Produto (String nome, String codigo, double preco){
+    public Produto(String nome, int codigo, double preco) {
         this.nome = nome;
         this.codigo = codigo;
         this.preco = preco;
     }
 
-    public String getCodigo(){
-        return codigo;
-    }
-
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
 
-    public double getPreco(){
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public double getPreco() {
         return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public void exibirProduto() {
+        System.out.printf(
+            "Código: %d | Produto: %s | Preço: R$ %.2f%n",
+            codigo, nome, preco
+        );
     }
 }
